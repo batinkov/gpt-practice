@@ -1,3 +1,4 @@
+#!/usr/bin/env -S uv run --env-file .env python
 """Two-stage ROCm check: does torch SEE the GPU, and can it actually RUN on it?
 
 The device query can pass while real kernels fail with "no kernel image is

@@ -84,6 +84,13 @@ Always pass the env file, so the override is applied:
 uv run --env-file .env python smoke_test.py
 ```
 
+`smoke_test.py` is executable and its shebang does exactly that, so from the
+project root this is equivalent:
+
+```bash
+./smoke_test.py
+```
+
 `smoke_test.py` verifies the GPU in two stages, because they fail
 independently: first that torch *sees* the device, then that real kernels
 *execute correctly* — it diffs a GPU matmul against CPU rather than just
